@@ -1,0 +1,9 @@
+class Solution:
+    def getSecondLargest(self, arr):
+        # Code Here
+        max_value=max(arr)
+        sec_lar= -1
+        for i in arr:
+            if i!=max_value:
+                sec_lar= max(sec_lar, i)
+        return(sec_lar)
