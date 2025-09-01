@@ -1,0 +1,18 @@
+# Majority Element More Than n/3
+
+class Solution:
+    def findMajority(self, arr):
+        # code here
+        n=len(arr)
+        thr=n//3
+        fre={}
+        for num in arr:
+            if num in fre:
+                fre[num]+=1
+            else:
+                fre[num]=1
+        result=[]
+        for num in fre:
+            if fre[num]>thr:
+                result.append(num)
+        return sorted(result)
