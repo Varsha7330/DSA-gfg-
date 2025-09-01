@@ -1,0 +1,24 @@
+#using array methods
+class Solution:
+    def reverseArray(self, arr):
+        # code here
+        arr.reverse()
+        return arr
+
+#using slicing operator
+arr = [1, 2, 3, 4, 5]
+reversed_arr = arr[::-1]
+print(reversed_arr)  # Output: [5, 4, 3, 2, 1]
+
+#without using array methods
+def reverse_array(arr):
+    left = 0
+    right = len(arr) - 1
+
+    while left < right:
+        # Swap elements at left and right indices
+        arr[left], arr[right] = arr[right], arr[left]
+        left += 1
+        right -= 1
+
+    return arr
